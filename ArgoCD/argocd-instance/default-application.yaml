@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: parent-app
+  namespace: argocd-instance-1 # Namespace where the Argo CD Application resource lives
+spec:
+  project: default # Refers to an existing AppProject
+  source:
+    repoURL: https://github.com/bstein-vmware/iac-demo.git # URL of the Git repository
+    targetRevision: main # The branch or tag to use (e.g., main, master, v1.0.0)
+    path: child-apps # Path within the repository to the application manifests
+  destination:
+    server: https://10.1.0.2:443 # URL of the target Kubernetes cluster
+    namespace: default # Namespace where the application will be deployed
+  syncPolicy:
+    automated:
+      prune: true # Automatically prune resources that are no longer in Git
+      selfHeal: true # Automatically sync out-of-sync resources
+#    syncOptions:
+#      - CreateNamespace=true # Create the target namespace if it doesn't exist
