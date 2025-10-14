@@ -61,7 +61,7 @@ spec:
      containers:
      - name: fluentd-loginsight
        image: bitnamilegacy/fluentd:1.4.0
-       command: ["fluentd", "-c", "/etc/fluentd/fluent.conf", "-p", "/fluentd/plugins"]
+       command: ["fluentd", "-c", "/opt/bitnami/fluentd/conf/fluentd.conf", "-p", "/opt/bitnami/fluentd/plugins"]
        env:
        - name: FLUENTD_ARGS
          value: --no-supervisor -q
@@ -76,7 +76,7 @@ spec:
          mountPath: /var/log
          readOnly: false
        - name: config-volume
-         mountPath: /etc/fluentd
+         mountPath: /opt/bitnami/fluentd
          readOnly: true
      volumes:
      - name: varlog
