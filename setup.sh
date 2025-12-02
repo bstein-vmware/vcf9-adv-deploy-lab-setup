@@ -21,9 +21,10 @@ while IFS= read -r command; do
     fi
 done < "$COMMANDS_FILE"
 
-echo "Applying DNS fix..."
-chmod +x dns_fix.sh
-./dns_fix.sh
+# removing the DNS fix. A new lab deployment has DNS fixed already
+#echo "Applying DNS fix..."
+#chmod +x dns_fix.sh
+#./dns_fix.sh
 
 echo "Creating Supervisor context..."
 vcf context create sup-wld --endpoint 10.1.0.2 -u administrator@wld.sso --insecure-skip-tls-verify --type k8s --auth-type basic
