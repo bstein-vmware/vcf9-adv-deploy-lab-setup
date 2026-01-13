@@ -15,7 +15,7 @@ spec:
       - kapp: {}
       fetch:
       - imgpkgBundle:
-          image: projects.packages.broadcom.com/antreainterworking/nsx-management-proxy-bundle:0.2.2
+          image: projects.packages.broadcom.com/vsphere/iaas/nsx-management-proxy-service/0.2.2/nsx-management-proxy-service:0.2.2
       template:
       - ytt:
           paths:
