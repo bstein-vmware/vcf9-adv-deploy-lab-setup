@@ -1,5 +1,5 @@
 #! The FQDN for accessing Harbor admin UI and Registry service.
-hostname: harbor.site-a.vcf.lab
+hostname: harbor-01a.site-a.vcf.lab
 #! The network port of the Envoy service in Contour or other Ingress Controller.
 port:
   https: 443
