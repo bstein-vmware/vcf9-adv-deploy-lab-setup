@@ -4,12 +4,12 @@ metadata:
   name: oc-mysql
   labels:
     vm-selector: oc-mysql
-    vm-lb-44qd: vm-lb-selector
+    vm-lb-y3jz: vm-lb-selector
     topology.kubernetes.io/zone: z-wld-a
 spec:
-  className: best-effort-xsmall
+  className: best-effort-small
   # Friendly image name: noble-server-cloudimg-amd64
-  imageName: vmi-7d775b326a50893d5
+  #imageName: vmi-4aa2f26b5a1b98edd
   storageClass: cluster-wld01-01a-storage-policy
   powerState: PoweredOn
   network:

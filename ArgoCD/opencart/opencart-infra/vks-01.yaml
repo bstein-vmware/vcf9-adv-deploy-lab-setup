@@ -13,7 +13,7 @@ spec:
     serviceDomain: cluster.local
   topology:
     class: builtin-generic-v3.3.0
-    version: v1.33.3---vmware.1-fips-vkr.1
+    version: v1.33.6---vmware.1-fips-vkr.2
     variables:
       - name: kubernetes
         value:
@@ -28,12 +28,12 @@ spec:
       replicas: 1
       metadata:
         annotations:
-          run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-1a6567e672f00e885
+          run.tanzu.vmware.com/resolve-os-image: os-name=photon
     workers:
       machineDeployments:
         - class: node-pool
-          name: vks-01-nodepool-puzn
-          replicas: 1
+          name: vks-01-nodepool-ly2w
+          replicas: 2
           metadata:
             annotations:
-              run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-1a6567e672f00e885
+              run.tanzu.vmware.com/resolve-os-image: os-name=photon

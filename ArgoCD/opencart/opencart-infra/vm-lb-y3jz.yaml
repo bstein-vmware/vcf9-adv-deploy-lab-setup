@@ -1,10 +1,10 @@
 apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachineService
 metadata:
-  name: vm-lb-44qd
+  name: vm-lb-y3jz
 spec:
   selector:
-    vm-lb-44qd: vm-lb-selector
+    vm-lb-y3jz: vm-lb-selector
   type: LoadBalancer
   ports:
     - name: ssh

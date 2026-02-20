@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opencart-lb
+spec:
+  destination:
+    namespace: opencart
+    server: https://10.1.11.7:6443
+  source:
+    path: opencart-lb
+    repoURL: http://10.1.10.130:3000/holuser/argocd.git
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
