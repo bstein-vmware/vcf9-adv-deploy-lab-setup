@@ -1,0 +1,14 @@
+namespace: "tanzu-system-telegraf"
+createNamespace: true
+global_tags:
+  tkc_cluster: "demo"
+  user: "vks"
+agent:
+  interval: 120s 
+outputPlugins:
+  file:
+    enabled: true
+    files:
+      - "stdout"
+    namepass:
+      - "*"
