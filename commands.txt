@@ -1,6 +1,7 @@
 sudo snap install curl
 sudo apt install -y kubectl
 sudo apt install -y kubectx
+sudo apt install -y kubens
 sudo apt install -y kubecolor
 curl -LO https://packages.broadcom.com/artifactory/vcf-distro/vcf-cli/linux/amd64/v9.0.2/vcf-cli.tar.gz
 tar -xvf vcf-cli.tar.gz
