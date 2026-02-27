@@ -29,11 +29,14 @@ done < "$COMMANDS_FILE"
 echo "Creating Supervisor context..."
 vcf context create sup-wld --endpoint 10.1.0.2 -u administrator@wld.sso --insecure-skip-tls-verify --type k8s --auth-type basic
 
-echo "Creating VKS workload cluster context..."
-vcf context create vks-cluster-qxml --endpoint 10.1.0.2 -u administrator@wld.sso --insecure-skip-tls-verify --workload-cluster-name kubernetes-cluster-qxml --workload-cluster-namespace demo-namespace-vkrcg --type k8s --auth-type basic
-
 echo "Setting sup-wld context as current..."
 vcf context use sup-wld
+
+#echo "Creating demo VKS cluster"
+#vcf cluster create -f demo_cluster.yaml -n demo-namespace-3qdtf
+
+#echo "Creating VKS workload cluster context..."
+#vcf context create demo-cluster-3qdtf --endpoint 10.1.0.2 -u administrator@wld.sso --insecure-skip-tls-verify --workload-cluster-name demo-cluster-3qdtf --workload-cluster-namespace demo-namespace-3qdtf --type k8s --auth-type basic
 
 source ~/.bashrc
 
