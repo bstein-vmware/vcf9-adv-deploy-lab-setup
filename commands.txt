@@ -1,4 +1,5 @@
 sudo snap install curl
+curl.snap-acked
 sudo apt install -y kubectl
 sudo apt install -y kubectx
 sudo apt install -y kubens
