@@ -1,0 +1,10 @@
+#cloud-config
+users:
+  - name: ubuntu
+    shell: /bin/bash
+    groups: [adm, sudo]
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCbqzdKSRFD+9IVfNY0goMaVIGEzWyF3enm6dAHp8h1iSC+uB1oEcatM8WuKZJ8jUPXNxiEfTHFyZFto/yQuOeK32YcFIZScuVH67hAZJitpqsZTJc0fyrNwSMywg9TFR4Ny22sB8S8ME63T6Lm/ILfvdNNsMaNiLKzt3xZmZ4vVb6lFcw9/cW99s2uUDyqVEGo17ea6rATGSensIZLcO/bYkaYPKtuctjAliCaz5o61m7PmLcr6IhcAKiwAIFGqS0MUlv32LhHLIWN6O6rK6rJDlvTP8FfFdff8cwqwRDGlJKk3sJE9GdfsuH5w25p+YYXl2TYBNGg8APR/D3Xew/5OLrYHXB/Br4QST7UtRPF5aUcraO+HiqIGBVbw2ir3TyA+H+DuAOX1KdRPq3tPrg5l77D6vf1Qp14nKB8TYLLe57la0wWAx1mj9XGVlZKZeXtfD/duCmEIIih+Z5By5dGz/EU8FnFFvgBQGETKdhRvUDCuxPqiUO4/crIMR/31Q/rO5ps5EL/lLNXLrhmooOUDp2MuBrxqXG3tQuopZLPyvT7jlgF7hWqHE/FfeZk4cmqLImZnkbdPDtmL7f5r+C19FqOCZN8iEEcgJ70x6XnEIqX3QYkUL26Np203BBg80hbTYC9T1TuOiRDBdswYdy82C5kPv8vE8D0XVKoC99VXQ== ubuntu@jumpbox
+    lock_passwd: false
+    # For password login (less secure, use hashed password):
+    passwd: $6$z7Prew/Xhk5hXnFd$8IKlj2WigczcJFNoisKViPKoNT6Zpe/xkIXJnZCZ0UDLv0CZt61opyDh.dzwyiFTwwFWB2ZDtlrqS/hasMydm1
