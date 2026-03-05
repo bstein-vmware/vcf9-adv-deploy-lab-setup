@@ -112,9 +112,9 @@ service:
   ## @param service.http.labels HTTP service additional labels
   ## @param service.http.loadBalancerClass Loadbalancer class
   http:
-    type: ClusterIP
+    type: LoadBalancer
     port: 3000
-    clusterIP:
+    clusterIP: None
     loadBalancerIP:
     nodePort:
     externalTrafficPolicy:
@@ -142,7 +142,7 @@ service:
   ssh:
     type: ClusterIP
     port: 22
-    clusterIP:
+    clusterIP: None
     loadBalancerIP:
     nodePort:
     externalTrafficPolicy:
@@ -265,11 +265,11 @@ persistence:
   create: true
   mount: true
   claimName: gitea-shared-storage
-  size: 100Gi
+  size: 50Gi
   accessModes:
     - ReadWriteOnce
   labels: {}
-  storageClass: vks-storage-policy
+  storageClass: "vks-storage-policy"
   subPath:
   volumeName: ""
   annotations:
@@ -366,7 +366,7 @@ gitea:
     # existingSecret: gitea-admin-secret
     existingSecret:
     username: admin
-    password: VMware123!
+    password: "VMware123!"
     email: "gitea@local.domain"
     passwordMode: keepUpdated
 
@@ -582,7 +582,7 @@ valkey:
   ## @param valkey.global.valkey.password Required password
   global:
     valkey:
-      password: VMware123!
+      password: "VMware123!"
 
   ## @param valkey.master.count Number of Valkey master instances to deploy
   ## @param valkey.master.service.ports.valkey Port of Valkey service
@@ -633,18 +633,18 @@ postgresql-ha:
   postgresql:
     image:
       repository: bitnamilegacy/postgresql-repmgr
-    repmgrPassword: VMware123!
-    postgresPassword: VMware123!
-    password: VMware123!
+    repmgrPassword: "VMware123!"
+    postgresPassword: "VMware123!"
+    password: "VMware123!"
 
   ## @param postgresql-ha.pgpool.adminPassword pgpool adminPassword
   ## @param postgresql-ha.pgpool.image.repository Image repository, eg. `bitnamilegacy/pgpool`.
   ## @param postgresql-ha.pgpool.srCheckPassword pgpool srCheckPassword
   pgpool:
-    adminPassword: VMware123!
+    adminPassword: "VMware123!"
     image:
       repository: bitnamilegacy/pgpool
-    srCheckPassword: VMware123!
+    srCheckPassword: "VMware123!"
 
   ## @param postgresql-ha.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
   service:
