@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: metal-music-store-ingress
+  namespace: default
+  annotations:
+    # Explicitly assign this to the HAProxy controller
+    haproxy.org/ingress.class: "haproxy"
+    # Optional: If you eventually add TLS, HAProxy will automatically redirect HTTP to HTTPS.
+    # To disable that forced redirect during local testing, uncomment the line below:
+    # haproxy.org/ssl-redirect: "false"
+spec:
+  # Also standard for newer K8s versions alongside the annotation
+  ingressClassName: haproxy 
+  rules:
+  - host: musicstore.local # Replace with your actual domain, or remove the 'host' line entirely to catch all traffic
+    http:
+      paths:
+      # 1. Route order-related API calls to the Order Service (Port 5001)
+      - path: /api/orders
+        pathType: Prefix
+        backend:
+          service:
+            name: order-service
+            port:
+              number: 5001
+              
+      # 2. Route cart-related endpoints to the Cart Service (Port 5002)
+      - path: /add_to_cart
+        pathType: Prefix
+        backend:
+          service:
+            name: cart-service
+            port:
+              number: 5002
+              
+      # 3. Route all other UI/store traffic to the main Store Service (Port 5000)
+      # Note: The catch-all '/' path must be at the bottom so it doesn't override the specific paths above.
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: store-service
+            port:
+              number: 5000
