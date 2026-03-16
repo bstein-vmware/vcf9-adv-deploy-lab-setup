@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   hostnames:
-  - app.site-a.vcf.lab
+  - app.vcf.sddc.lab
   parentRefs:
   - name: contour
   rules:
@@ -15,4 +15,4 @@ spec:
         value: /
     backendRefs:
     - name: nginx
-      port: 443
+      port: 80

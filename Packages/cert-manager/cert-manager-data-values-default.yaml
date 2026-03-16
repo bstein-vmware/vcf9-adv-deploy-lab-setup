@@ -1,0 +1,8 @@
+certManager:
+  pspNames:
+    - vmware-system-privileged
+issuers: []
+kubernetes_distribution: ""
+kubernetes_version: ""
+namespace: cert-manager
+priorityClassName: ""
