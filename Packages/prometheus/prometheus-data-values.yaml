@@ -20,7 +20,7 @@ alertmanager:
   pvc:
     accessMode: ReadWriteOnce
     storage: 2Gi
-    storageClassName: cluster-wld01-01a-vsan-storage-policy
+    storageClassName: vks-storage-policy
   service:
     port: 80
     targetPort: 9093
@@ -49,7 +49,7 @@ ingress:
     ca.crt: ca
     tls.crt: crt
     tls.key: key
-  virtual_host_fqdn: prometheus.site-a.vcf.lab
+  virtual_host_fqdn: prometheus.vcf.sddc.lab
 kube_state_metrics:
   deployment:
     replicas: 1
@@ -725,6 +725,7 @@ prometheus:
   pvc:
     accessMode: ReadWriteOnce
     storage: 150Gi
+    storageClassName: vks-storage-policy
   service:
     port: 80
     targetPort: 9090
