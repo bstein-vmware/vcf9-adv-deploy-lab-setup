@@ -7,6 +7,9 @@ sudo apt install -y kubecolor
 curl -LO https://packages.broadcom.com/artifactory/vcf-distro/vcf-cli/linux/amd64/v9.0.2/vcf-cli.tar.gz
 tar -xvf vcf-cli.tar.gz
 sudo install vcf-cli-linux_amd64 /usr/local/bin/vcf
+gzip -dk ./Supervisor_Services/argocd-cli-linux-amd64-v3.0.19-vcf.gz 
+sudo install ./Supervisor_Services/argocd-cli-linux-amd64-v3.0.19-vcf /usr/local/bin/argocd
+rm ./Supervisor_Services/argocd-cli-linux-amd64-v3.0.19-vcf
 echo alias k=kubectl >> ~/.bashrc
 echo alias kctx=kubectx >> ~/.bashrc
 echo alias kns=kubens >> ~/.bashrc
