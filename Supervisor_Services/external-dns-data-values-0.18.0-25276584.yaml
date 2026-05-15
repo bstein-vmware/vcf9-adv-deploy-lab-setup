@@ -1,0 +1,43 @@
+---
+#! enable tlsConfig part if try to use TLS connection with TLS enabled BIND DNS server
+#tlsConfig:
+#  tls_enable: true
+#! User require to provide base64 encryption format of ca.crt value which uses to validate tls connection with DNS server once tls_enable=true
+#  ca_crt: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUZwekNDQTQrZ0F3SUJBZ0lVZmxLT3I0UkhickVzMG1ucTZKaTE4Y3FqRUQwd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1l6RUxNQWtHQTFVRUJoTUNWVk14RGpBTUJnTlZCQWdNQlZOMFlYUmxNUTB3Q3dZRFZRUUhEQVJEYVhSNQpNUlV3RXdZRFZRUUtEQXhQY21kaGJtbDZZWFJwYjI0eERUQUxCZ05WQkFzTUJGVnVhWFF4RHpBTkJnTlZCQU1NCkJsSnZiM1JEUVRBZUZ3MHlOVEEwTWpnd056UTBNRFZhRncwek5UQTBNall3TnpRME1EVmFNR014Q3pBSkJnTlYKQkFZVEFsVlRNUTR3REFZRFZRUUlEQVZUZEdGMFpURU5NQXNHQTFVRUJ3d0VRMmwwZVRFVk1CTUdBMVVFQ2d3TQpUM0puWVc1cGVtRjBhVzl1TVEwd0N3WURWUVFMREFSVmJtbDBNUTh3RFFZRFZRUUREQVpTYjI5MFEwRXdnZ0lpCk1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQ0R3QXdnZ0lLQW9JQ0FRQzEvY3JmTTF1SGNqdy9HWWpJL3BRcmtTblEKRWZuRTN2byt3R1RTNkxUM0JvdmliTzR6UUpTM2E3STZoaytvdzNYMHlxVklwZUVyVFNtT08wR0xlMUZFTFdHbgpZZHM4UldwZ3dvZUhUN1NlSUVGSnFGMko2bFFKRmFXem5zUlhGdk4rbXlpWk41T2o1Q0w4akViSmo0Wkx3Q0ZOClZQV1dWTDZXSzdpaW9WK2tKRXdFMWp5SHVYbXZVQVlCVk9NZlZsa0ptb01mcy9ZL2RKbXJBb1Z6VlVsc1JzRGEKVTAweUhmdHE2cm83YXFMVXJKaTdjM1FqU3BGTTVTVkVVY0UwUjdQVFhMOGFXcXV5RVI3bWUySjBlMEgvMk5jMwpJVm5ONlNiZURwMS9PdTA3eGxncUZ1UXEzTjNwcXl1VEpSWW9XT0dHd1I2Q3J4L0pkUW4zbU90SFVDMEtwZTJwCi92eTNkVnFHN3ErZ3JwN0pBUFZ2Vkh4dmdYYkJka0RMYmxaMjZQOElxMUp6TTI5ZExRdjFqUnVMNFRmSG5xS0EKZmNKeWU5eWJmeWxkd0dGR2M1VXFPaHB1L1ZOak5lVDNtNHlTSnhCVmZ1Q1phZTBDaWZOMWZ1Nk1TdzJWRU4xbgpOWjdpODBpdTE0ZFAwenFKUnRoSHB6SisxYUx5WGpoSWN3YkZHRkNrODNtSHFadjYzT0owbllKY3ZIL2EvSDRtCm5Gdlcrcmh3TGx6R1JLOWMrWS8rOENNMC9FS3VVd21saWNhZWZwTVE1c1BEak5aVk5TeTMycFJlSmt6TTNvbWsKN21EK1hnT2JpbDZXMnNPb09lYkVzSm15Z0x1RlFJZ0s2NTJHbVoyNkJjc25rWmlKVXJYVFo1N2E5MnZvTlhvQwplUEtKSDZqOWxsTi8wQllrYVFJREFRQUJvMU13VVRBZEJnTlZIUTRFRmdRVXBtdnBBRHVWK0NVYjZ2eUNZeng5CjVLQlQ2ekl3SHdZRFZSMGpCQmd3Rm9BVXBtdnBBRHVWK0NVYjZ2eUNZeng5NUtCVDZ6SXdEd1lEVlIwVEFRSC8KQkFVd0F3RUIvekFOQmdrcWhraUc5dzBCQVFzRkFBT0NBZ0VBSThYTk8yQ0xvNWRDc1V6MEZEVTlZUkduT2Z1NApxWGVWOEg4K1czc290L2hBNk5BdGtvcUZqUUpWVmt5QVI4R3NtdnkxUFRRQlVxRTAvbE1DeWdNbGxwMVlwZnhNCmhwSUNWalp4bVZwQjBiTmpMMnJ5WWlrTGdjQVEzYTd5aWphTUFvaUlyREdxYVNodVVoMFFOWmVLUWxMdEJ3OTMKdFR3dGlQMjRFU0s3a05TOXR3blgwYWU0UTJLK09rdzZVQkVyd1h0TnZrKzBGUDAxcVJ4MXFsQ01CeCtqTHFiTgpwZ21PYjFxNFFQSGt4NzEvai9Gdm8xTUdRZm5McEJXakdaMmIvMW5FWEVvMHhVL3llYnpTYTBZT3Y3ZGptcjNqCkp5bHg2RkQySEpCS1ZsT0tBek1rNmlyaUpVeExDUnNSZlI1NEU3NG1TY0NVVXp1OS9UTTYwN2NFNmw4ZVB1VEEKL2FOMFlLeDV3ZEJkSkVadkxyUzVORTZpUjJ6WnVHamJTZFRWLzJFb3Zlc0pPQ1FkUGhYTm12T3lWK280TTRieQpKZ0U2WWxKWldnekVHa0Y2TWQvN3RmaG1BMDMxUUc4NnZqdVJVMWhWSC8vRmF2K3lac0NBRnBBYlNua004czdUCjNQQkxDOWFOSkFOOVVySTRnWGg2aWJFUGRMTnYwdE1hR0JwWDBVMFdub1R0WnlaMGJhVVlSUW90Ly94MGgvQU0KdnRFZlNtYlh0ZlZKZERqZHByTER0emxZWXhOTjVUWHdOTEpNYWJFekowVUV5ZE1NZGJocFN4cXJ4elFNWkhvSwpibFlzWS9hNFJVQXI4NVVjdC8xcjFlR0I0U2dUcVk0aTNMd1p6N2I3SHRZaUZQdmZ0SW5XWnJUbk0rQ2NwTmwzCnV5WUxhQThkd25QQWR1OD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+
+#! User define the new priority class
+#priorityClassName: "user-defined-ps"
+
+#! #! Re-Define the limits value of LimitRange quota of external-dns installation namespace, such as "tanzu-system-service-discovery"
+#nsLimitRange:
+#  defaultRequests:
+#    cpu: "60m"
+#    memory: "78Mi"
+#  defaultLimits:
+#    cpu: "200m"
+#    memory: "256Mi"
+
+deployment:
+  args:
+    - --registry=txt
+    - --txt-prefix=external-dns-
+    - --txt-owner-id=k8s
+    - --provider=rfc2136
+    - --rfc2136-host=100.93.1.123    #! update the bind DNS server ip/fqdn accordingly
+    - --rfc2136-port=53
+    - --rfc2136-zone=k8s.ex.com      #! update this domain according to your own bind server zone configuration
+    - --rfc2136-tsig-secret=fFO4YMkI/ZptqsnJW/EIiptfblHx0VSGyN77=   #! update the tsig secret when deploy bind server uses
+    - --rfc2136-tsig-secret-alg=hmac-sha256
+    - --rfc2136-tsig-keyname=externaldns-key        #! update the tsig keyname when deploy bind server uses
+    - --rfc2136-tsig-axfr
+    - --source=service
+    - --source=ingress
+    - --domain-filter=k8s.ex.com
+    #- --log-level=debug           #! enable it if trying to do debug
+#  resources:               #! user configure the container resources' requests & limits
+#    requests:
+#      cpu: "50m"
+#      memory: "64Mi"
+#    limits:
+#      cpu: "100m"
+#      memory: "128Mi"
